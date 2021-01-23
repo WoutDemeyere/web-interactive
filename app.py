@@ -1,11 +1,12 @@
 import os
 import json
+import asyncio
 from azure.iot.device import IoTHubDeviceClient
 import rtmidi
 import time
 
 
-conn_str = "" #Get conenction string from azure
+conn_str = "HostName=spacemakers.azure-devices.net;DeviceId=macmini-koen;SharedAccessKey=ILz7I7l6plCn+eyXW3mH1WhnPhQ3DyYreS4nl3DMEFs=" #Get conenction string from azure
 device_client = IoTHubDeviceClient.create_from_connection_string(conn_str)
 
 midiout = rtmidi.MidiOut()
